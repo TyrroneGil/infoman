@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "project-demo-ef370",
+    "staging": "project-demo-ef370"
+  },
+  "targets": {},
+  "etags": {}
+}

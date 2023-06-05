@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="/src/Blogger-Logo.jpg" height="50px" width="100px" alt=""></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-nav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class=" nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <?php
+
+        if (isset($_SESSION['user_id']) == null) : ?>
+          <li class="nav-item">
+            <a class=" nav-link" href="signup.php">Signup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.php">Login</a>
+          </li>
+      </ul>
+
+
+    
+      <?php elseif (isset($_SESSION['user_id']) != null) :
+          $username = $db->collection('users')->document($_SESSION['user_id'])->snapshot();
+      ?>
+        
+          <a class=" nav-link" href="logout.php">Logout</a>
+        
+       
+          <a class=" nav-link">Welcome
+            <?php echo $username['username']; ?>
+          </a>
+
+       
+      
+          <a class="nav-link" href="postform.php?id='<?php echo $_SESSION['user_id'] ?>'">Add Post</a>
+
+      
+     
+    <?php endif; ?>
+
+    </div>
+    </div>
+
+
+
+
+    </div>
+    </div>
+  </nav>

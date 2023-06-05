@@ -1,0 +1,17 @@
+{
+    "name": "tyrrone/tyrrone",
+    "description": ";lsfdkjasldfk;jasdf",
+    "type": "project",
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "Tyrrone\\Tyrrone\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "google/cloud-firestore": "^1.33",
+      
+        "kreait/firebase-php": "^7.2"
+    }
+}

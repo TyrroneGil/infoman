@@ -1,0 +1,1 @@
+(date_format(date_create($comment['date']), 'F n,Y'))
